@@ -8,7 +8,7 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <View className="flex:1 justify-start items-center h-[100%]
-    bg-gray-300 p-[6px]">
+    bg-gray-300 p-6">
       <Text className="text-3xl font-bold 
             mt-[2rem] text-[#067eee]">Login Form</Text>
       <Image
