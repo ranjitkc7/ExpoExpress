@@ -1,11 +1,41 @@
-import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, Image, Alert} from 'react-native'
 import React, { useState } from 'react'
 import { useRouter } from "expo-router";
 import { FontAwesome5, AntDesign } from '@expo/vector-icons';
 
 const LoginPage = () => {
+
   const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+
+  const handleLogIn = async () => {
+    if (!email || !password) {
+      Alert.alert("Error!", "Please enter both email and password");
+      return;
+    }
+    try {
+      const res = await fetch("http://192.168.1.10:5000/logIn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json();
+
+      if (res.ok) {
+        Alert.alert("Success", data.message || "Login successful!", [
+          { text: "OK", onPress: () => router.push("/(tabs)") },
+        ]);
+      } else {
+        Alert.alert("Error", data.message || "Invalid email or password");
+      }
+    } catch (error) {
+      console.error(error);
+      Alert.alert("Error", "Something went wrong. Please try again later.");
+    }
+  }
+
   return (
     <View className="flex:1 justify-start items-center h-[100%]
     bg-gray-300 p-6">
@@ -19,6 +49,8 @@ const LoginPage = () => {
         <TextInput
           className="bg-white p-2 rounded-[6px] w-full mt-[1rem] h-[3.2rem] text-[1.1rem] focus:border-1
        focus:ring-[#023047] "
+          value={email}
+          onChangeText={setEmail}
           placeholder='Enter the email'
           placeholderTextColor="#023047"
         />
@@ -26,6 +58,8 @@ const LoginPage = () => {
           <TextInput
             className="bg-white p-2 rounded-[6px] w-full mt-[1rem] h-[3.2rem] text-[1.1rem] focus:border-1
        focus:ring-[#023047] "
+            value={password}
+            onChangeText={setPassword}
             placeholder='Enter the password'
             secureTextEntry={!showPassword}
             placeholderTextColor="#023047"
@@ -41,6 +75,7 @@ const LoginPage = () => {
           </TouchableOpacity>
         </View>
         <TouchableOpacity
+        onPress={handleLogIn}
           className="bg-[#00FF00] px-4 py-2 mt-[1rem] rounded-[8px] w-full"
 
         >

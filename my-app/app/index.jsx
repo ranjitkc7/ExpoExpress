@@ -15,11 +15,11 @@ const RegisterPage = () => {
 
     const handleRegister = async () => {
         if (!username || !email || !password || !confirmPassword) {
-            Alert.alert("Please fill all fields");
+            Alert.alert("Error!", "Please fill all fields");
             return;
         }
         if (password !== confirmPassword) {
-            Alert.alert("Passwords do not match");
+            Alert.alert("Error!", "Passwords do not match");
             return;
         }
 
