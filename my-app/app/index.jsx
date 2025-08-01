@@ -24,7 +24,7 @@ const RegisterPage = () => {
         }
 
         try {
-            const res = await fetch("http://192.168.1.10:5000/signUp", {
+            const res = await fetch("http://192.168.1.4:5000/signUp", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, email, password }),
@@ -129,6 +129,10 @@ const RegisterPage = () => {
                     <Text className="font-bold text-[1.1rem] text-[#067eee]">LogIn</Text>
                 </TouchableOpacity>
             </View>
+            <TouchableOpacity onPress={() => router.push("/(tabs)")}>
+                <Text>Go</Text>
+            </TouchableOpacity>
+
         </View>
     )
 }

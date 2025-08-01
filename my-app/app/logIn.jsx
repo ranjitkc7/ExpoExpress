@@ -16,7 +16,7 @@ const LoginPage = () => {
       return;
     }
     try {
-      const res = await fetch("http://192.168.1.10:5000/logIn", {
+      const res = await fetch("http://192.168.1.4:5000/logIn", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

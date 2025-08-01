@@ -1,25 +1,27 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import { useTheme } from "../../context/ThemeContext";
 
 const LayoutPage = () => {
+    const { mode } = useTheme();
     return (
         <Tabs
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: "#00FF00",
-                    borderBottomColor: "#000000",
+                    backgroundColor: mode === "dark" ? "#000000" : "#00FF00",
+                    borderBottomColor: mode === "dark" ? "#fff" : "#000000",
                     borderBottomWidth: 1,
                 },
                 tabBarStyle: {
-                    backgroundColor: "#000000",
+                    backgroundColor: mode === "dark" ? "#000000" : "#00FF00",
                     height: 60,
-                    marginBottom:10,
+                    marginBottom: 10,
                 },
-                tabBarActiveTintColor: "#00FF00",
-                tabBarInactiveTintColor: "white",
-                headerTintColor: "#ffffff"
+                tabBarActiveTintColor: mode === 'dark' ? '#0f0' : '#00f',
+                tabBarInactiveTintColor: mode === 'dark' ? '#aaa' : '#555',
+                headerTintColor: mode === 'dark' ? '#fff' : '#000',
             }}
         >
             <Tabs.Screen
@@ -37,6 +39,15 @@ const LayoutPage = () => {
                     title: "Play",
                     tabBarIcon: ({ color }) => (
                         <FontAwesome name="play-circle" size={30} color={color} />
+                    ),
+                }}
+            />
+            <Tabs.Screen
+                name="settings"
+                options={{
+                    title: "Settings",
+                    tabBarIcon: ({ color }) => (
+                        <Ionicons name="settings" size={30} color={color} />
                     ),
                 }}
             />
