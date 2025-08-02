@@ -1,8 +1,8 @@
-import historyQuestions from '../../data/historyQuestion1';
+import historyQuestions from '../../data/historyQuestion1.json';
 import QuestionList from '../../component/QuestionList';
 
-const History = () => {
+const HistoryQA = () => {
     return <QuestionList title="इतिहास" data={historyQuestions} />;
 };
 
-export default History;
+export default HistoryQA;

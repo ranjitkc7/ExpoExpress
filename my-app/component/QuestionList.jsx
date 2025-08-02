@@ -1,5 +1,6 @@
 import { View, Text, FlatList } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+import "../global.css";
 
 const QuestionList = ({ title, data }) => {
     const renderItem = ({ item }) => (

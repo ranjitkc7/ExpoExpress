@@ -1,0 +1,662 @@
+[
+    {
+        "id": 1,
+        "question": "कम्प्युटरको ‘CPU’ को पूर्ण रूप के हो?",
+        "options": [
+            "सेंट्रल प्रोसेसिङ यूनिट",
+            "कम्प्युटर प्रोसेसिङ यूनिट",
+            "कम्प्युटर प्रिन्टिंग यूनिट",
+            "सेंसर प्रोग्राम यूनिट"
+        ],
+        "correctAnswer": "सेंट्रल प्रोसेसिङ यूनिट"
+    },
+    {
+        "id": 2,
+        "question": "कम्प्युटरले के भाषामा मात्र बुझ्छ?",
+        "options": [
+            "उच्च स्तरको भाषा",
+            "बाइनरी भाषा",
+            "असेंबली भाषा",
+            "प्रोग्रामिङ भाषा"
+        ],
+        "correctAnswer": "बाइनरी भाषा"
+    },
+    {
+        "id": 3,
+        "question": "निम्न मध्ये कुन प्रोग्रामिङ भाषा उच्च स्तरको हो?",
+        "options": [
+            "मेसिन भाषा",
+            "असेंबली भाषा",
+            "पाइथन",
+            "बाइनरी भाषा"
+        ],
+        "correctAnswer": "पाइथन"
+    },
+    {
+        "id": 4,
+        "question": "कुन यन्त्रले कम्प्युटरमा डेटा इनपुट दिन्छ?",
+        "options": [
+            "मोनिटर",
+            "किबोर्ड",
+            "प्रिन्टर",
+            "स्पिकर"
+        ],
+        "correctAnswer": "किबोर्ड"
+    },
+    {
+        "id": 5,
+        "question": "कम्प्युटरको मेमोरी कस्तो हुन्छ?",
+        "options": [
+            "स्मृति संग्रह",
+            "सूचना प्रक्रिया गर्ने ठाउँ",
+            "डेटा इनपुट यन्त्र",
+            "डेटा आउटपुट यन्त्र"
+        ],
+        "correctAnswer": "स्मृति संग्रह"
+    },
+    {
+        "id": 6,
+        "question": "कुन प्रोग्रामिङ भाषाले वेबसाइटको संरचना निर्धारण गर्छ?",
+        "options": [
+            "CSS",
+            "HTML",
+            "JavaScript",
+            "Python"
+        ],
+        "correctAnswer": "HTML"
+    },
+    {
+        "id": 7,
+        "question": "कुन प्रोग्रामिङ भाषाले वेबसाइटमा अन्तरक्रियात्मक क्षमता दिन प्रयोग गरिन्छ?",
+        "options": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "SQL"
+        ],
+        "correctAnswer": "JavaScript"
+    },
+    {
+        "id": 8,
+        "question": "डेटा व्यवस्थापनका लागि कुन भाषालाई सबैभन्दा उपयुक्त मानिन्छ?",
+        "options": [
+            "Python",
+            "SQL",
+            "Java",
+            "C++"
+        ],
+        "correctAnswer": "SQL"
+    },
+    {
+        "id": 9,
+        "question": "कुन भाषा कम्प्युटरको सबैभन्दा नजिकको भाषा हो?",
+        "options": [
+            "असेंबली",
+            "Python",
+            "Java",
+            "C#"
+        ],
+        "correctAnswer": "असेंबली"
+    },
+    {
+        "id": 10,
+        "question": "कुन यन्त्रले कम्प्युटरलाई इन्टरनेटसँग जोड्दछ?",
+        "options": [
+            "राउटर",
+            "प्रिन्टर",
+            "किबोर्ड",
+            "माउस"
+        ],
+        "correctAnswer": "राउटर"
+    },
+    {
+        "id": 11,
+        "question": "कुन प्रकारको मेमोरी अस्थायी भण्डारणको लागि प्रयोग हुन्छ?",
+        "options": [
+            "RAM",
+            "ROM",
+            "Hard Disk",
+            "Flash Drive"
+        ],
+        "correctAnswer": "RAM"
+    },
+    {
+        "id": 12,
+        "question": "कुन प्रकारको मेमोरी स्थायी रूपमा डेटा भण्डारण गर्छ?",
+        "options": [
+            "RAM",
+            "ROM",
+            "Cache Memory",
+            "Register"
+        ],
+        "correctAnswer": "ROM"
+    },
+    {
+        "id": 13,
+        "question": "कम्प्युटरको नियंत्रक हिस्सा कुन हो?",
+        "options": [
+            "प्रोसेसर",
+            "मेन मेमोरी",
+            "इनपुट डिभाइस",
+            "कन्ट्रोल यूनिट"
+        ],
+        "correctAnswer": "कन्ट्रोल यूनिट"
+    },
+    {
+        "id": 14,
+        "question": "कुन नेटवर्क टोपोलोजीमा सबै यन्त्रहरू एक अर्कासँग सिधा जोडिएका हुन्छन्?",
+        "options": [
+            "बस टोपोलोजी",
+            "रिङ टोपोलोजी",
+            "स्टार टोपोलोजी",
+            "मेष टोपोलोजी"
+        ],
+        "correctAnswer": "मेष टोपोलोजी"
+    },
+    {
+        "id": 15,
+        "question": "कुन प्रोग्रामिङ भाषामा ‘if’, ‘for’ जस्ता निर्देशनहरू हुन्छन्?",
+        "options": [
+            "मेसिन कोड",
+            "असेंबली",
+            "उच्च स्तरको भाषाहरू",
+            "कम्पाइलर"
+        ],
+        "correctAnswer": "उच्च स्तरको भाषाहरू"
+    },
+    {
+        "id": 16,
+        "question": "कम्पाइलर के काम गर्छ?",
+        "options": [
+            "सोर्स कोडलाई मेसिन कोडमा रूपान्तरण गर्छ",
+            "डेटा भण्डारण गर्छ",
+            "डाटा पठाउँछ",
+            "नेटवर्क व्यवस्थापन गर्छ"
+        ],
+        "correctAnswer": "सोर्स कोडलाई मेसिन कोडमा रूपान्तरण गर्छ"
+    },
+    {
+        "id": 17,
+        "question": "असेंबली भाषा के हो?",
+        "options": [
+            "मेसिन भाषाको नजिकको उच्च स्तरको भाषा",
+            "मेसिन भाषा",
+            "उच्च स्तरको भाषा",
+            "स्क्रिप्टिङ भाषा"
+        ],
+        "correctAnswer": "मेसिन भाषाको नजिकको उच्च स्तरको भाषा"
+    },
+    {
+        "id": 18,
+        "question": "Python प्रोग्रामिङ भाषा मुख्य रूपमा कुन कामका लागि प्रयोग हुन्छ?",
+        "options": [
+            "वेब विकास र डाटा विज्ञान",
+            "हार्डवेयर डिजाइन",
+            "ग्रह गणना",
+            "सञ्जाल सुरक्षा"
+        ],
+        "correctAnswer": "वेब विकास र डाटा विज्ञान"
+    },
+    {
+        "id": 19,
+        "question": "कुन भाषा मोबाइल एप्लिकेशन विकासमा प्राय प्रयोग हुन्छ?",
+        "options": [
+            "Swift",
+            "Cobol",
+            "HTML",
+            "Pascal"
+        ],
+        "correctAnswer": "Swift"
+    },
+    {
+        "id": 20,
+        "question": "कुन भाषा वेब पृष्ठलाई स्टाइल गर्न प्रयोग हुन्छ?",
+        "options": [
+            "HTML",
+            "CSS",
+            "Java",
+            "PHP"
+        ],
+        "correctAnswer": "CSS"
+    },
+    {
+        "id": 21,
+        "question": "डेटा कम्युनिकेसनमा ‘UDP’ के हो?",
+        "options": [
+            "User Datagram Protocol",
+            "Universal Data Protocol",
+            "User Data Program",
+            "Unified Datagram Process"
+        ],
+        "correctAnswer": "User Datagram Protocol"
+    },
+    {
+        "id": 22,
+        "question": "कुन प्रोग्रामिङ भाषाले ‘Object Oriented’ प्रोग्रामिङलाई समर्थन गर्छ?",
+        "options": [
+            "Fortran",
+            "COBOL",
+            "C++",
+            "BASIC"
+        ],
+        "correctAnswer": "C++"
+    },
+    {
+        "id": 23,
+        "question": "कुन प्रोग्रामिङ भाषामा ‘Class’ तथा ‘Object’ प्रयोग हुन्छ?",
+        "options": [
+            "C++",
+            "Assembly",
+            "SQL",
+            "HTML"
+        ],
+        "correctAnswer": "C++"
+    },
+    {
+        "id": 24,
+        "question": "HTML को ‘H’ को पूर्ण रुप के हो?",
+        "options": [
+            "Hyperlink",
+            "Hypertext",
+            "Hypermedia",
+            "Hyperspace"
+        ],
+        "correctAnswer": "Hypertext"
+    },
+    {
+        "id": 25,
+        "question": "कुन यन्त्रले कम्प्युटरमा डेटा सुरक्षित गर्छ?",
+        "options": [
+            "RAM",
+            "Hard Disk",
+            "Monitor",
+            "Keyboard"
+        ],
+        "correctAnswer": "Hard Disk"
+    },
+    {
+        "id": 26,
+        "question": "कुन नेटवर्क उपकरण डेटा प्याकेट फर्वार्ड गर्छ?",
+        "options": [
+            "Switch",
+            "Router",
+            "Modem",
+            "Hub"
+        ],
+        "correctAnswer": "Router"
+    },
+    {
+        "id": 27,
+        "question": "कुन प्रोग्रामिङ भाषामा ‘Indentation’ महत्त्वपूर्ण हुन्छ?",
+        "options": [
+            "Python",
+            "JavaScript",
+            "C",
+            "Java"
+        ],
+        "correctAnswer": "Python"
+    },
+    {
+        "id": 28,
+        "question": "कम्प्युटर मेमोरीमा डेटा के रूपमा संग्रहित हुन्छ?",
+        "options": [
+            "Character Format",
+            "Numbers Only",
+            "Binary Format (0s and 1s)",
+            "Image Format"
+        ],
+        "correctAnswer": "Binary Format (0s and 1s)"
+    },
+    {
+        "id": 29,
+        "question": "कुन यन्त्रले कम्प्युटर नेटवर्कमा वायरलेस कनेक्शन दिन्छ?",
+        "options": [
+            "Router",
+            "Switch",
+            "Access Point",
+            "Repeater"
+        ],
+        "correctAnswer": "Access Point"
+    },
+    {
+        "id": 30,
+        "question": "कुन प्रोटोकल इन्टरनेटमा वेबसाइट सुरक्षित पहुँचको लागि प्रयोग हुन्छ?",
+        "options": [
+            "HTTP",
+            "HTTPS",
+            "FTP",
+            "SMTP"
+        ],
+        "correctAnswer": "HTTPS"
+    },
+    {
+        "id": 31,
+        "question": "कुन प्रोग्रामिङ भाषा मोबाइल एप्लिकेशन विकासमा प्रयोग हुन्छ?",
+        "options": [
+            "Java",
+            "C",
+            "Fortran",
+            "COBOL"
+        ],
+        "correctAnswer": "Java"
+    },
+    {
+        "id": 32,
+        "question": "कुन यन्त्रले प्रणालीमा डेटा सुरक्षा व्यवस्थापन गर्छ?",
+        "options": [
+            "Firewall",
+            "Router",
+            "Modem",
+            "Switch"
+        ],
+        "correctAnswer": "Firewall"
+    },
+    {
+        "id": 33,
+        "question": "कुन प्रकारको मेमोरी CPU को नजिक रहेको छ र सबैभन्दा छिटो हुन्छ?",
+        "options": [
+            "Main Memory",
+            "Cache Memory",
+            "Hard Disk",
+            "ROM"
+        ],
+        "correctAnswer": "Cache Memory"
+    },
+    {
+        "id": 34,
+        "question": "कुन भाषाले वेब पेजमा स्क्रिप्ट लेख्ने अनुमति दिन्छ?",
+        "options": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "SQL"
+        ],
+        "correctAnswer": "JavaScript"
+    },
+    {
+        "id": 35,
+        "question": "कम्प्युटर नेटवर्कमा ‘IP’ ले के जनाउँछ?",
+        "options": [
+            "Internet Provider",
+            "Internal Process",
+            "Internet Protocol",
+            "Input Processor"
+        ],
+        "correctAnswer": "Internet Protocol"
+    },
+    {
+        "id": 36,
+        "question": "कुन वस्तुले कम्प्युटर सिस्टममा हार्डवेयर तथा सफ्टवेयर व्यवस्थापन गर्छ?",
+        "options": [
+            "Operating System",
+            "Application Software",
+            "Programming Language",
+            "Database"
+        ],
+        "correctAnswer": "Operating System"
+    },
+    {
+        "id": 37,
+        "question": "कुन प्रोग्रामिङ अवधारणा डाटा तथा कार्यहरूलाई वस्तुहरुमा केन्द्रित गर्दछ?",
+        "options": [
+            "Procedural Programming",
+            "Object Oriented Programming",
+            "Functional Programming",
+            "Logic Programming"
+        ],
+        "correctAnswer": "Object Oriented Programming"
+    },
+    {
+        "id": 38,
+        "question": "कुन कुन थरीका प्रोग्रामिङ भाषाहरू छन्?",
+        "options": [
+            "High Level Language र Low Level Language",
+            "Primary Language र Secondary Language",
+            "HTML र XML",
+            "Java र C#"
+        ],
+        "correctAnswer": "High Level Language र Low Level Language"
+    },
+    {
+        "id": 39,
+        "question": "कुन यन्त्र कम्प्युटर डाटा इनपुटको लागि प्रयोग गरिन्छ?",
+        "options": [
+            "Monitor",
+            "CPU",
+            "Mouse",
+            "Printer"
+        ],
+        "correctAnswer": "Mouse"
+    },
+    {
+        "id": 40,
+        "question": "डेटाबेसमा डेटा खोज्न प्रयोग हुने भाषा के हो?",
+        "options": [
+            "SQL",
+            "HTML",
+            "Python",
+            "Java"
+        ],
+        "correctAnswer": "SQL"
+    },
+    {
+        "id": 41,
+        "question": "कुन प्रोग्रामिङ भाषा वेब विकासका लागि व्यापक रूपमा प्रयोग गरिन्छ?",
+        "options": [
+            "PHP",
+            "C",
+            "Fortran",
+            "COBOL"
+        ],
+        "correctAnswer": "PHP"
+    },
+    {
+        "id": 42,
+        "question": "कुन यन्त्रले प्रिन्ट गरिएको कागजमा लेखिएका कुरा पढ्न मद्दत गर्छ?",
+        "options": [
+            "Scanner",
+            "Printer",
+            "Monitor",
+            "Speaker"
+        ],
+        "correctAnswer": "Scanner"
+    },
+    {
+        "id": 43,
+        "question": "कुन प्रकारको डेटा भण्डारण यन्त्र हो SSD?",
+        "options": [
+            "Liquid Storage",
+            "Solid State Drive",
+            "Magnetic Storage",
+            "Optical Storage"
+        ],
+        "correctAnswer": "Solid State Drive"
+    },
+    {
+        "id": 44,
+        "question": "कुन कंप्यूटर भाषामा 'for', 'while' जस्ता लूपहरू हुन्छन्?",
+        "options": [
+            "High-level programming languages",
+            "Machine languages",
+            "Assembly languages",
+            "Markup languages"
+        ],
+        "correctAnswer": "High-level programming languages"
+    },
+    {
+        "id": 45,
+        "question": "कम्प्युटरको हार्डवेयर र सफ्टवेयर बीच अन्तर के हो?",
+        "options": [
+            "हार्डवेयर भौतिक उपकरण हुन्, सफ्टवेयर निर्देशहरु हुन्",
+            "हार्डवेयर सफ्टवेयर जस्तै कार्यक्रम हो",
+            "सफ्टवेयर भौतिक उपकरण हुन्, हार्डवेयर निर्देशहरु हुन्",
+            "दुवै समान अर्थका शब्दहरु हुन्"
+        ],
+        "correctAnswer": "हार्डवेयर भौतिक उपकरण हुन्, सफ्टवेयर निर्देशहरु हुन्"
+    },
+    {
+        "id": 46,
+        "question": "इंटरनेटको खोजकर्ता को हो?",
+        "options": [
+            "टिम बर्नर्स-ली",
+            "मार्क जुकरबर्ग",
+            "बिल गेट्स",
+            "स्टीव जॉब्स"
+        ],
+        "correctAnswer": "टिम बर्नर्स-ली"
+    },
+    {
+        "id": 47,
+        "question": "कुन प्रोग्रामिङ भाषाले कृत्रिम बौद्धिकता (AI) मा प्रयोग गरिन्छ?",
+        "options": [
+            "PROLOG",
+            "COBOL",
+            "JAVA",
+            "HTML"
+        ],
+        "correctAnswer": "PROLOG"
+    },
+    {
+        "id": 48,
+        "question": "कम्प्युटरको स्रोत कोडलाई मेसिन कोडमा अनुवाद गर्ने उपकरण के हो?",
+        "options": [
+            "कमपाइलर",
+            "डिबगगर",
+            "एडिटर",
+            "इंटरप्रिटर"
+        ],
+        "correctAnswer": "कमपाइलर"
+    },
+    {
+        "id": 49,
+        "question": "कुन कम्प्युटर मेमोरी नचाहिँदा डाटा कायम रहन्छ?",
+        "options": [
+            "RAM",
+            "ROM",
+            "Cache",
+            "Registers"
+        ],
+        "correctAnswer": "ROM"
+    },
+    {
+        "id": 50,
+        "question": "कुन नेटवर्क यन्त्रले डाटा ट्राफिकलाई व्यवस्थित गर्न प्रयोग गरिन्छ?",
+        "options": [
+            "Switch",
+            "Hub",
+            "Modem",
+            "Printer"
+        ],
+        "correctAnswer": "Switch"
+    },
+    {
+        "id": 51,
+        "question": "कुन प्रोग्रामिङ भाषामा वेब पृष्ठहरूको लेआउट डिजाइन गरिन्छ?",
+        "options": [
+            "CSS",
+            "Python",
+            "C++",
+            "Java"
+        ],
+        "correctAnswer": "CSS"
+    },
+    {
+        "id": 52,
+        "question": "कम्प्युटरमा ‘Bit’ के हो?",
+        "options": [
+            "एक डेटा इकाई",
+            "फाइलको प्रकार",
+            "एक नेटवर्क प्रोटोकल",
+            "एक प्रोग्रामिङ भाषाको अवयव"
+        ],
+        "correctAnswer": "एक डेटा इकाई"
+    },
+    {
+        "id": 53,
+        "question": "कुन प्रोग्रामिङ भाषाले वेब सर्भरमा सर्वर पृष्ठहरू तयार गर्न प्रयोग गरिन्छ?",
+        "options": [
+            "PHP",
+            "HTML",
+            "JavaScript",
+            "CSS"
+        ],
+        "correctAnswer": "PHP"
+    },
+    {
+        "id": 54,
+        "question": "कुन हार्डवेयर यन्त्रले भिडियो संकेत प्रदर्शन गर्छ?",
+        "options": [
+            "Monitor",
+            "Printer",
+            "Speaker",
+            "Keyboard"
+        ],
+        "correctAnswer": "Monitor"
+    },
+    {
+        "id": 55,
+        "question": "कम्प्युटरको संग्रहण क्षमता निर्धारण गर्ने एकाइ के हो?",
+        "options": [
+            "Bit",
+            "Byte",
+            "Pixel",
+            "Hertz"
+        ],
+        "correctAnswer": "Byte"
+    },
+    {
+        "id": 56,
+        "question": "नेटवर्कमा दुई वा बढी कम्प्युटरहरू जोडिएका प्रणालीलाई के भनिन्छ?",
+        "options": [
+            "Database",
+            "Network",
+            "Hardware",
+            "Software"
+        ],
+        "correctAnswer": "Network"
+    },
+    {
+        "id": 57,
+        "question": "कुन प्रोग्रामिङ अवधारणा डेटा र कार्यहरूको पुन: प्रयोगमा आधारित छ?",
+        "options": [
+            "Object-oriented programming",
+            "Procedural programming",
+            "Functional programming",
+            "Imperative programming"
+        ],
+        "correctAnswer": "Object-oriented programming"
+    },
+    {
+        "id": 58,
+        "question": "कुन कम्प्युटर भाषा सबैभन्दा पुरानो हो?",
+        "options": [
+            "Fortran",
+            "Python",
+            "Java",
+            "C++"
+        ],
+        "correctAnswer": "Fortran"
+    },
+    {
+        "id": 59,
+        "question": "कुन प्रोग्रामिङ भाषामा कन्करन्सी र मल्टीथ्रेडिङ उत्कृष्ट छ?",
+        "options": [
+            "Java",
+            "C",
+            "PHP",
+            "HTML"
+        ],
+        "correctAnswer": "Java"
+    },
+    {
+        "id": 60,
+        "question": "कुन यन्त्रले कम्प्युटरको कामलाई गति दिन मद्दत गर्छ?",
+        "options": [
+            "CPU",
+            "RAM",
+            "Hard Disk",
+            "Power Supply"
+        ],
+        "correctAnswer": "CPU"
+    }
+]

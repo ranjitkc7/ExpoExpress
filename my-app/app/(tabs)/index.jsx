@@ -18,7 +18,7 @@ const MainPage = () => {
     { id: 7, name: "IQ Tests", icon: "brain", iconLib: FontAwesome5, route: "iq" },
     { id: 8, name: "Culture & Religion", icon: "yin-yang", iconLib: FontAwesome5, route: "culture" },
     { id: 9, name: "Current Affairs", icon: "newspaper", iconLib: FontAwesome5, route: "currentAffairs" },
-    { id: 10, name: "General Knowledge", icon: "lightbulb", iconLib: FontAwesome5, route: "general" },
+    { id: 10, name: "Solar System", icon: "planet", iconLib: Ionicons, route: "solarSystem" },
   ];
   const renderItem = ({ item }) => {
     const IconComponent = item.iconLib;
@@ -27,7 +27,7 @@ const MainPage = () => {
         onPress={() => router.push(`(collection)/${item.route}`)}
         activeOpacity={0.8}
         className="flex-row h-[4rem] justify-between
-    items-center px-4  w-[20rem] rounded-md bg-[#067eee] mb-[5px]">
+    items-center px-4  w-[22rem] rounded-md bg-[#067eee] mb-[5px]">
         <Text className='text-white text-[1.2rem] font-[600]'>{item.name}</Text>
         <IconComponent name={item.icon} size={24} color="white" />
       </TouchableOpacity>
@@ -44,8 +44,8 @@ const MainPage = () => {
           data={titles}
           keyExtractor={(item) => item.id}
           renderItem={renderItem}
+          showsVerticalScrollIndicator={false}
         />
-
       </View>
     </View>
   )

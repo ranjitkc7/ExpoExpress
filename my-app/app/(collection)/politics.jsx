@@ -7,4 +7,4 @@ const PoliticsQA = () => {
   )
 }
 
-export default PoliticsQA
+export default PoliticsQA;
