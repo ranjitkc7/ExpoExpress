@@ -1,15 +1,16 @@
-import { View, Text, FlatList, TouchableOpacity, } from 'react-native'
-import { FontAwesome5, MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { View, Text, FlatList, TouchableOpacity, StatusBar } from 'react-native'
+import { FontAwesome5, MaterialIcons, Ionicons, Fontisto } from '@expo/vector-icons';
 import React from 'react'
 import "../../global.css";
 import { useRouter } from 'expo-router';
+import { useTheme } from "../../context/ThemeContext";
 
 const MainPage = () => {
   const router = useRouter();
-  xw
+  const { mode } = useTheme();
   const titles = [
     { id: 1, name: "History", icon: "history", iconLib: FontAwesome5, route: "history" },
-    { id: 2, name: "Geography", icon: "map", iconLib: FontAwesome5, route: "geography" },
+    { id: 2, name: "Geography", icon: "earth", iconLib: Fontisto, route: "geography" },
     { id: 3, name: "Politics", icon: "gavel", iconLib: FontAwesome5, route: "politics" },
     { id: 4, name: "Sports", icon: "football", iconLib: Ionicons, route: "sports" },
     { id: 5, name: "Science & Technology", icon: "science", iconLib: MaterialIcons, route: "science" },
@@ -23,6 +24,7 @@ const MainPage = () => {
     const IconComponent = item.iconLib;
     return (
       <TouchableOpacity
+        onPress={() => router.push(`(collection)/${item.route}`)}
         activeOpacity={0.8}
         className="flex-row h-[4rem] justify-between
     items-center px-4  w-[20rem] rounded-md bg-[#067eee] mb-[5px]">
@@ -33,6 +35,10 @@ const MainPage = () => {
   }
   return (
     <View className="flex-1 items-center justify-center">
+      <StatusBar
+        barStyle={mode === "dark" ? "light-content" : "dark-content"}
+        backgroundColor={mode === "dark" ? "#000" : "#ffffff"}
+      />
       <View className="mt-3 ">
         <FlatList
           data={titles}

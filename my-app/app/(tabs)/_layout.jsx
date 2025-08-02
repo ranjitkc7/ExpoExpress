@@ -13,11 +13,11 @@ const LayoutPage = () => {
                     backgroundColor: mode === "dark" ? "#000000" : "#00FF00",
                     borderBottomColor: mode === "dark" ? "#fff" : "#000000",
                     borderBottomWidth: 1,
+                    height: 50,
                 },
                 tabBarStyle: {
                     backgroundColor: mode === "dark" ? "#000000" : "#00FF00",
-                    height: 60,
-                    marginBottom: 10,
+                    height: 55,
                 },
                 tabBarActiveTintColor: mode === 'dark' ? '#0f0' : '#00f',
                 tabBarInactiveTintColor: mode === 'dark' ? '#aaa' : '#555',

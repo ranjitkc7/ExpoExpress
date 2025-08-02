@@ -1,4 +1,4 @@
-import { View, Text, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StatusBar } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import "../../global.css";
 import { Ionicons } from '@expo/vector-icons';
@@ -63,6 +63,10 @@ const SettingPage = () => {
     )
     return (
         <View className="p-[12px] ">
+            <StatusBar
+                barStyle={mode === "dark" ? "light-content" : "dark-content"}
+                backgroundColor={mode === "dark" ? "#000" : "#ffffff"}
+            />
             <Text className="text-[1.2rem] font-[600] mb-2">Language</Text>
             <View className="h-[5.3rem] w-full bg-[#067eee] rounded-md">
                 <FlatList
