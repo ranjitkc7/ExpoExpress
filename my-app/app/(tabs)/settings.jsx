@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import "../../global.css";
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../context/ThemeContext';
+import Animated, { SlideInRight, SlideInLeft, } from 'react-native-reanimated';
 
 const SettingPage = () => {
     const { mode, toggleTheme } = useTheme();
@@ -62,7 +63,10 @@ const SettingPage = () => {
         </TouchableOpacity>
     )
     return (
-        <View className="p-[12px] ">
+        <Animated.View
+            entering={SlideInRight.duration(500)}
+            exiting={SlideInLeft.duration(500)}
+            className="p-[12px] ">
             <StatusBar
                 barStyle={mode === "dark" ? "light-content" : "dark-content"}
                 backgroundColor={mode === "dark" ? "#000" : "#ffffff"}
@@ -83,7 +87,7 @@ const SettingPage = () => {
                     renderItem={renderItemMode}
                 />
             </View>
-        </View>
+        </Animated.View>
     );
 };
 

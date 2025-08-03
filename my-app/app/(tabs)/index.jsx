@@ -1,13 +1,33 @@
 import { View, Text, FlatList, TouchableOpacity, StatusBar } from 'react-native'
 import { FontAwesome5, MaterialIcons, Ionicons, Fontisto } from '@expo/vector-icons';
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../../global.css";
 import { useRouter } from 'expo-router';
 import { useTheme } from "../../context/ThemeContext";
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withTiming,
+  Easing,
+} from 'react-native-reanimated';
 
 const MainPage = () => {
   const router = useRouter();
   const { mode } = useTheme();
+
+  const opacity = useSharedValue(0);
+  const translateY = useSharedValue(0);
+
+  useEffect(() => {
+    opacity.value = withTiming(1, { duration: 1000, easing: Easing.out(Easing.ease) });
+    translateY.value = withTiming(0, { duration: 1000, easing: Easing.out(Easing.ease) });
+  })
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      opacity: opacity.value,
+      transform: [{ translateY: translateY.value }],
+    };
+  })
   const titles = [
     { id: 1, name: "History", icon: "history", iconLib: FontAwesome5, route: "history" },
     { id: 2, name: "Geography", icon: "earth", iconLib: Fontisto, route: "geography" },
@@ -39,14 +59,16 @@ const MainPage = () => {
         barStyle={mode === "dark" ? "light-content" : "dark-content"}
         backgroundColor={mode === "dark" ? "#000" : "#ffffff"}
       />
-      <View className="mt-3 ">
+      <Animated.View
+        style={animatedStyle}
+        className="mt-3 ">
         <FlatList
           data={titles}
           keyExtractor={(item) => item.id}
           renderItem={renderItem}
           showsVerticalScrollIndicator={false}
         />
-      </View>
+      </Animated.View>
     </View>
   )
 }

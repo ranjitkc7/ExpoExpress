@@ -5,7 +5,7 @@ import "../global.css";
 const QuestionList = ({ title, data }) => {
     const renderItem = ({ item }) => (
         <View className="pt-1 rounded-md mb-2 border-b-[1px] border-[#00FF00]">
-            <View className="flex-row gap-[0.5rem]">
+            <View className="flex-row gap-[0.5rem] pr-2">
                 <Text className="font-bold ">{`${item.id}.`}</Text>
                 <Text className="text-[15px] font-bold">{item.question}</Text>
             </View>
