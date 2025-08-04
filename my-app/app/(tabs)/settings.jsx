@@ -66,12 +66,20 @@ const SettingPage = () => {
         <Animated.View
             entering={SlideInRight.duration(500)}
             exiting={SlideInLeft.duration(500)}
-            className="p-[12px] ">
+            className="p-[12px] flex-1"
+            style={{
+                backgroundColor: mode === "dark" ? "#000" : "#ffffff"
+            }}
+            >
             <StatusBar
                 barStyle={mode === "dark" ? "light-content" : "dark-content"}
                 backgroundColor={mode === "dark" ? "#000" : "#ffffff"}
             />
-            <Text className="text-[1.2rem] font-[600] mb-2">Language</Text>
+            <Text className="text-[1.2rem] font-[600] mb-2"
+            style={{
+                color : mode === "dark" ? "#fff" : "#000"
+            }}
+            >Language</Text>
             <View className="h-[5.3rem] w-full bg-[#067eee] rounded-md">
                 <FlatList
                     data={languages}
@@ -79,7 +87,11 @@ const SettingPage = () => {
                     renderItem={renderItemLanguage}
                 />
             </View>
-            <Text className="mt-[1rem] text-[1.2rem] font-[600] mb-2">Mode</Text>
+            <Text className="mt-[1rem] text-[1.2rem] font-[600] mb-2"
+             style={{
+                color : mode === "dark" ? "#fff" : "#000"
+             }}
+            >Mode</Text>
             <View className="h-[5.3rem] w-full bg-[#067eee] rounded-md">
                 <FlatList
                     data={modes}

@@ -1,4 +1,4 @@
-import { View, Text, StatusBar, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, StatusBar, ScrollView, TextInput, TouchableOpacity, FlatList } from 'react-native';
 import { useTheme } from "../../context/ThemeContext";
 import React, { useState } from "react";
 import "../../global.css";
@@ -18,6 +18,8 @@ import cultureQA from '../../data/cultureQuesion.json';
 import currentAffairsQA from '../../data/currentAffairsQuestion.json';
 import solarSystemQA from '../../data/solarSystemQuestion.json';
 
+import rules from "../../data/rule.json"
+
 const PlayPage = () => {
   const { mode } = useTheme();
 
@@ -26,7 +28,7 @@ const PlayPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answered, setAnswered] = useState([]);
   const [score, setScore] = useState(0);
-
+  const [showRule, setShowRule] = useState(false)
   const handleSearch = async () => {
     try {
       const query = searchItem.trim().toLowerCase();
@@ -73,6 +75,15 @@ const PlayPage = () => {
       setCurrentIndex(currentIndex - 1);
     }
   };
+  const renderRule = ({ item }) => {
+    return (
+      <View className="flex-row gap-[0.3rem] pr-2" key={item.id}>
+        <Text className="font-bold  text-white">{`${item.id}.`}</Text>
+        <Text className="text-[15px] font-bold text-white">{item.rule}</Text>
+      </View>
+
+    )
+  }
   return (
     <Animated.View
       entering={SlideInRight.duration ? SlideInRight.duration(500) : SlideInRight.withDuration(500)}
@@ -86,11 +97,10 @@ const PlayPage = () => {
       />
 
       <ScrollView
-        className="flex-1 "
-        contentContainerClassName="flex-1 mt-4 gap-4 pl-2 pr-3"
-        contentContainerStyle={{ flexGrow: 1 }}
+        className="flex-1"
+        contentContainerStyle={{ paddingBottom: 80, paddingTop: 16, paddingHorizontal: 12 }}
       >
-        <View className="flex-1 absolute w-full pl-2 ">
+        <View className="relative w-full pl-2 ">
           <TextInput
             value={searchItem}
             onChangeText={setSearchItem}
@@ -106,7 +116,7 @@ const PlayPage = () => {
             <Feather name="search" size={27} color="black" />
           </TouchableOpacity>
         </View>
-        <View className="mt-[4rem] items-center justify-center w-[17rem] 
+        <View className="my-[0.7rem] items-center justify-center w-[17rem] 
         h-[2.3rem] rounded-md  bg-[#00ff00] ml-[3.5rem]">
           <Text className="text-[1.5rem]">Score: {score} / {question.length}</Text>
         </View>
@@ -128,7 +138,26 @@ const PlayPage = () => {
             )
           }
         </View>
-        
+        <View className="mt-3">
+          <TouchableOpacity
+            onPress={() => setShowRule(!showRule)}
+            activeOpacity={0.8}
+            className="w-[17rem] h-[2.3rem] rounded-md bg-[#00ff00] ml-[3.5rem]">
+            <Text className="text-[1.5rem] text-center">{
+              showRule ? "Hide Rules" : "Show Rules"
+            }</Text>
+          </TouchableOpacity>
+          {
+            showRule && (
+              <View className="h-[14rem] mt-2 w-full pl-[2px] 
+             pt-[4px] bg-[#242a30] rounded-md">
+                {
+                  rules.map((item) => renderRule({ item }))
+                }
+              </View>
+            )
+          }
+        </View>
       </ScrollView>
     </Animated.View>
   );

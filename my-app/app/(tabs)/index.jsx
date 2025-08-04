@@ -54,7 +54,9 @@ const MainPage = () => {
     )
   }
   return (
-    <View className="flex-1 items-center justify-center">
+    <View className="flex-1 items-center justify-center"
+     style={{ backgroundColor: mode === "dark" ? "#000" : "#ffffff" }}
+    >
       <StatusBar
         barStyle={mode === "dark" ? "light-content" : "dark-content"}
         backgroundColor={mode === "dark" ? "#000" : "#ffffff"}

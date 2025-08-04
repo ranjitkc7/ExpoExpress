@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "rule": "Select a category to start the quiz."
+  },
+  {
+    "id": 2,
+    "rule": "One question is shown at a time."
+  },
+  {
+    "id": 3,
+    "rule": "You must choose option before clicking Next."
+  },
+  {
+    "id": 4,
+    "rule": "Each correct answer gives 1 point."
+  },
+  {
+    "id": 5,
+    "rule": "You can view your score at time of playing."
+  },
+  {
+    "id": 6,
+    "rule": "You change your answer after moving forward."
+  },
+  {
+    "id": 7,
+    "rule": "Use the Prev button to revisit previous questions."
+  },
+  {
+    "id": 8,
+    "rule": "Complete all questions to finish the quiz."
+  }
+]
