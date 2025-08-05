@@ -16,7 +16,7 @@ const LoginPage = () => {
       return;
     }
     try {
-      const res = await fetch("http://192.168.1.4:5000/logIn", {
+      const res = await fetch("http://192.168.1.5:5000/logIn", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -38,14 +38,14 @@ const LoginPage = () => {
 
   return (
     <View className="flex:1 justify-start items-center h-[100%]
-    bg-gray-300 p-6">
+    bg-gray-300 p-6 pt-1">
       <Text className="text-3xl font-bold 
             mt-[2rem] text-[#067eee]">Login Form</Text>
       <Image
         source={require('../assets/sign1.png')}
-        className="w-[30rem] h-[18rem] rounded-full"
+        className="w-[30rem] h-[14rem] mt-2 rounded-full"
       />
-      <View className="w-full h-[13rem] mt-[3rem] rounded-md bg-blue-100 px-[5px]">
+      <View className="w-full h-[13rem] mt-[2rem]  rounded-md bg-blue-100 px-[5px]">
         <TextInput
           className="bg-white p-2 rounded-[6px] w-full mt-[1rem] h-[3.2rem] text-[1.1rem] focus:border-1
        focus:ring-[#023047] "
