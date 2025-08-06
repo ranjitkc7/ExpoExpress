@@ -12,29 +12,33 @@ const LoginPage = () => {
 
   const handleLogIn = async () => {
     if (!email || !password) {
-      Alert.alert("Error!", "Please enter both email and password");
+      Alert.alert("Error", "Please enter both email and password");
       return;
     }
+
     try {
-      const res = await fetch("http://192.168.1.5:5000/logIn", {
+      const response = await fetch("http://192.168.1.12:5000/logIn", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ email, password }),
       });
-      const data = await res.json();
 
-      if (res.ok) {
-        Alert.alert("Success", data.message || "Login successful!", [
+      const resData = await response.json();
+
+      if (response.ok) {
+        Alert.alert("Success", resData.message || "Login successful!", [
           { text: "OK", onPress: () => router.push("/(tabs)") },
         ]);
       } else {
-        Alert.alert("Error", data.message || "Invalid email or password");
+        Alert.alert("Error", resData.message || "Invalid email or password");
       }
     } catch (error) {
-      console.error(error);
-      Alert.alert("Error", "Something went wrong. Please try again later.");
+      console.error("Login Error:", error.message || error);
+      Alert.alert("Network Error", "Could not connect to the server.");
     }
-  }
+  };
 
   return (
     <View className="flex:1 justify-start items-center h-[100%]

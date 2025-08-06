@@ -7,6 +7,7 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
+
 const schema = yup.object().shape({
     username: yup.string().required("Username is required"),
     email: yup.string().email("Invalid email format").required("Email is required"),
@@ -39,24 +40,29 @@ const RegisterPage = () => {
 
     const onSubmit = async (data) => {
         try {
-            const res = await fetch("http://192.168.1.5:5000/signUp", {
+            const response = await fetch("http://192.168.1.12:5000/signUp", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json",
+                },
                 body: JSON.stringify(data),
             });
 
-            const resData = await res.json();
+            const resData = await response.json();
 
-            if (res.ok) {
-                Alert.alert("Success", resData.message || "Registered successfully!", [
-                    { text: "OK", onPress: () => router.push("/logIn") },
-                ]);
+            if (response.ok) {
+                Alert.alert(
+                    "Success",
+                    resData.message || "Registered successfully!",
+                    [{ text: "OK", onPress: () => router.push("/logIn") }]
+                );
             } else {
+                // Handle known errors from backend
                 Alert.alert("Error", resData.message || "Registration failed");
             }
         } catch (error) {
-            console.error(error);
-            Alert.alert("Error", "Something went wrong. Please try again later.");
+            console.error("Signup Error:", error.message || error);
+            Alert.alert("Network Error", "Failed to connect to the server.");
         }
     };
 
